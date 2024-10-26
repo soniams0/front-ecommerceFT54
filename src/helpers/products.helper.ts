@@ -27,29 +27,37 @@ export async function getProductById(id: string): Promise<IProduct> {
     }
   };
 
-  export async function getProductByCategoryOrName(categoryIdOrName: string): Promise<IProduct[]>{
+  export async function getProductByCategoryOrName(categoryIdOrName?: string): Promise<IProduct[]> {
+    if (!categoryIdOrName) {
+        console.error("Category or name parameter is missing.");
+        return []; // Devuelve un array vacío si falta el parámetro
+    }
+
     try {
-      const products: IProduct[] = await getProductsDB();
+        const products: IProduct[] = await getProductsDB();
 
-      //filtrar por categoria
-      let productFiltered = products.filter((product) => product.categoryId.toString() === categoryIdOrName)
+        // Filtrar por categoría
+        let productFiltered = products.filter((product) => product.categoryId.toString() === categoryIdOrName);
 
+        // Si no encuentra por categoría, filtra por nombre del producto
+        if (!productFiltered.length) {
+            productFiltered = products.filter((product) =>
+                product.name.toLowerCase().includes(categoryIdOrName.toLowerCase())
+            );
 
-      //si no encuentra por categoria, filtramos por nombre de producto 
-      if(!productFiltered.length){
-        productFiltered = products.filter((product) => product.name.toLowerCase().includes(categoryIdOrName.toLowerCase()))
-      
-        if(!productFiltered.length){
-          console.error("Product not found")
+            if (!productFiltered.length) {
+                console.error("Product not found");
+            }
         }
 
-      }
-      return productFiltered;
+        return productFiltered;
 
     } catch (error: any) {
-      throw new Error(error);
+        console.error("Error fetching products:", error);
+        throw new Error(error);
     }
-  };
+};
+
   
 
 
