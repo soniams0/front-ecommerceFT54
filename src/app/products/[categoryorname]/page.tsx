@@ -15,7 +15,7 @@ const Products: React.FC <{params: {categoryorname: string}}> = async ({params})
             {products.length ? (
                 products?.map((product: IProduct) => {
                     return (
-                        <Link key={product.id} href={`/product/${product.id}`}>
+                        <Link key={product.id} href={`/products/${product.id}`}>
                             <Card {...product} />
                         </Link>
                     );
