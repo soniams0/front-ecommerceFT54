@@ -27,7 +27,7 @@ export async function getProductById(id: string): Promise<IProduct> {
     }
   };
 
-  export async function getProductByCategoryOrName(categoryIdOrName?: string): Promise<IProduct[]> {
+  export async function getProductsByCategoryOrName(categoryIdOrName?: string): Promise<IProduct[]> {
     if (!categoryIdOrName) {
         console.error("Category or name parameter is missing.");
         return []; // Devuelve un array vacío si falta el parámetro

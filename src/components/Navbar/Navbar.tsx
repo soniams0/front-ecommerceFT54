@@ -32,7 +32,7 @@ const Navbar = () => {
                 return(
                   <Link className="text-white text-sm font-medium transition-colors duration-200 hover:text-[#43C6AC]" key={category.id} href={`/products/${category.id}`}>{category.name}</Link>
                 )
-              } )
+              })
             }
   
           </div>
