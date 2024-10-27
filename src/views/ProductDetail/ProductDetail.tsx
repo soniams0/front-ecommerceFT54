@@ -1,6 +1,7 @@
 import Button from '@/components/Button/Button';
 import { IProduct } from '@/interfaces'
 import { cookies } from 'next/headers';
+import Image from 'next/image';
 import React from 'react'
 
 const ProductDetail: React.FC<IProduct> = (props) => {
@@ -15,7 +16,7 @@ const ProductDetail: React.FC<IProduct> = (props) => {
     <section className="w-full min-h-screen bg-white text-gray-900">
     <div className="container mx-auto p-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
       <div className="flex justify-center">
-        <img
+        <Image
           src={image}
           alt="product image"
           className="h-auto max-h-[500px] w-full max-w-[600px] object-contain rounded-lg shadow-md border border-gray-200"

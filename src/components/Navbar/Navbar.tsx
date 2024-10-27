@@ -4,6 +4,7 @@ import logo1 from '@/assets/logo1.png';
 import NavbarButtons from '../NavbarButtons';
 import categoriesToPreload from '@/helpers/categories';
 import SearchBar from '../SearchBar/SearchBar';
+import Image from 'next/image';
 
 const Navbar = () => {
 
@@ -14,7 +15,7 @@ const Navbar = () => {
 
             <div className="flex shrink-0">
               <Link aria-current="page" className="flex items-center" href="/">
-                <img
+                <Image
                   className="h-7 w-auto"
                   src={logo1.src}
                   alt="Website Logo"
