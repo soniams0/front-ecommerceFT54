@@ -29,7 +29,7 @@ console.log(orders)
               {order.products.map((product: IProduct) => (
                 <div key={product.id} className="flex items-center justify-between mb-2">
                   <div className="flex items-center">
-                    <Image src={product.image} alt={product.name} className="w-16 h-16 object-cover rounded mr-4" />
+                    <Image src={product.image} alt={product.name} width={500} height={300} className="w-16 h-16 object-cover rounded mr-4" />
                     <p className="font-semibold text-gray-700">{product.name}</p>
                   </div>
                   <p className="text-black-900">${product.price}</p>

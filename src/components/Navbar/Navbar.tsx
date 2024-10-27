@@ -19,6 +19,8 @@ const Navbar = () => {
                   className="h-7 w-auto"
                   src={logo1.src}
                   alt="Website Logo"
+                  width={500} 
+                  height={300} 
                 />
                 <p className="sr-only">Website Title</p>
               </Link>

@@ -46,6 +46,7 @@ const Slider = () => {
               layout="fill"
               objectFit="cover"
               className="w-full h-full"
+              width={500} height={300} 
             />
           </div>
         ))}

@@ -11,6 +11,7 @@ const Card: React.FC<IProduct> = ({image, name, price}) => {
       className="h-full w-full object-contain p-2" 
       src={image} 
       alt="product image"
+      width={500} height={300} 
     />
     <span className="absolute top-2 left-2 rounded-full bg-black px-2 text-center text-xs font-medium text-white">
     </span>

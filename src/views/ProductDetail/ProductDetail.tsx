@@ -19,6 +19,7 @@ const ProductDetail: React.FC<IProduct> = (props) => {
         <Image
           src={image}
           alt="product image"
+          width={500} height={300} 
           className="h-auto max-h-[500px] w-full max-w-[600px] object-contain rounded-lg shadow-md border border-gray-200"
         />
       </div>
