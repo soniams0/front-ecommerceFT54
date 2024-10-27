@@ -1,5 +1,4 @@
 import { IProduct } from '@/interfaces'
-import Image from 'next/image';
 import React from 'react'
 
 const Card: React.FC<IProduct> = ({image, name, price}) => {
@@ -7,11 +6,10 @@ const Card: React.FC<IProduct> = ({image, name, price}) => {
     <div className="group my-10 flex w-full max-w-[260px] max-h-[400px] flex-col overflow-hidden rounded-lg border border-gray-200 bg-customColor shadow-md">
 
   <div className="relative mx-3 mt-3 h-52 flex items-center justify-center overflow-hidden rounded-lg bg-gray-50">
-    <Image
+    <img
       className="h-full w-full object-contain p-2" 
       src={image} 
       alt="product image"
-      width={500} height={300} 
     />
     <span className="absolute top-2 left-2 rounded-full bg-black px-2 text-center text-xs font-medium text-white">
     </span>

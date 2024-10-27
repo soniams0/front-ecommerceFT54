@@ -1,5 +1,4 @@
 import { IProduct } from '@/interfaces'
-import Image from 'next/image';
 import Link from 'next/link'
 import React from 'react'
 
@@ -13,7 +12,7 @@ const CartProduct: React.FC<CartProductProps> = ({ id, image, name, price, onRem
     <div className="rounded-lg border border-gray-200 bg-customColor p-4 shadow-sm md:p-6">
       <div className="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
         <Link href="#" className="shrink-0 md:order-1">
-          <Image className="h-20 w-20" src={image} alt={name} width={500} height={300}  />
+          <img className="h-20 w-20" src={image} alt={name} />
         </Link>
 
         <div className="flex items-center justify-between md:order-3 md:justify-end">
