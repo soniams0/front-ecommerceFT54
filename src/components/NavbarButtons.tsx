@@ -28,7 +28,7 @@ const NavbarButtons: React.FC = () => {
               href="/register"
               className="hidden sm:inline-flex items-center justify-center rounded-lg bg-white/90 px-4 py-2 text-sm font-semibold text-[#191645] shadow-md ring-1 ring-gray-300 hover:bg-white"
             >
-              Sign in
+              Sign up
             </Link>
             <Link
               href="/login"
